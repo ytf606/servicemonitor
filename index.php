@@ -33,7 +33,7 @@ foreach ($ret as $k=>$v) {
     foreach ($v as $kk=>$vv) {
         $method_name = $kk;
         $result = (array)json_decode($vv);
-        if ($vv['errno'] != 0) {
+        if ($result['errno'] != 0) {
             $err_service[] = $service_name;
             $err_info[] = format_output($service_name, $method_name, $result);
         }
